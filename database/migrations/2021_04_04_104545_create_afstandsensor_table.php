@@ -14,7 +14,7 @@ class CreateAfstandsensorTable extends Migration
     public function up()
     {
         Schema::create('afstandsensor', function (Blueprint $table) {
-            $table->boolean('sensor_on');
+            $table->string('sensor_on');
         });
     }
 

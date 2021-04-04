@@ -12,7 +12,7 @@ class AfstandTableSeeder extends Seeder
     public function run()
     {
         DB::table('afstandsensor')->insert([
-            'sensor_on' => 1
+            'sensor_on' => "aan"
         ]);
     }
 }
