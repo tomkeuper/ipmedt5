@@ -25,6 +25,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/knop', 'KnopController@aanuit');
+Route::get('/knop', [KnopController::class, 'aanuit']);
 
-Route::get('/huizen', [\App\Http\Controllers\HuisController::class, 'index']);
+Route::get('/huizen', [HuisController::class, 'index']);
