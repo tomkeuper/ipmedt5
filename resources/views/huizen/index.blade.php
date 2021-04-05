@@ -1,13 +1,13 @@
 @extends('default')
 
 @section('title')
-    {{"All Sushi"}}
+    {{"Alle Huizen"}}
 @endsection
 
 @section('content')
 <ul class="u-grid-12 u-grid-gap-2">
-    @foreach($huis as $huizen)
-        @include('huis.components.huisCard--index')
+    @foreach($huis as $huis)
+        @include('huizen.components.huisCard--index')
     @endforeach
 </ul>
 @endsection

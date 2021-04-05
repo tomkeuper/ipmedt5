@@ -11,5 +11,7 @@ class HuisController extends Controller
         return view('huizen.index',[
             'huis' => Huis::all()
         ]);
+
+        // return Huis::all();
     }
 }
