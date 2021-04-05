@@ -6,8 +6,8 @@
 
 @section('content')
 <ul class="u-grid-12 u-grid-gap-2">
-    @foreach($sushi as $sushi)
-        @include('sushi.components.sushiCard--index')
+    @foreach($huis as $huizen)
+        @include('huis.components.huisCard--index')
     @endforeach
 </ul>
 @endsection
