@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HuisController;
+use App\Http\Controllers\KnopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +25,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/knop', 'App\Http\Controllers\KnopController@aanuit');
+Route::get('/knop', 'KnopController@aanuit');
+
+Route::get('/huizen', [\App\Http\Controllers\HuisController::class, 'index']);
