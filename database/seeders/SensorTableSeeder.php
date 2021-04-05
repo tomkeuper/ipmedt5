@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use DB;
 
 class SensorTableSeeder extends Seeder
 {
@@ -13,10 +14,8 @@ class SensorTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('sensors')->insert([
-            'naam' => "Paniek Knop",
-            'huis_id' => "1",
-            'enabled' => "true"
+        DB::table('sensors')->insert([
+            
         ]);
     }
 }

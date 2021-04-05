@@ -14,7 +14,7 @@ class CreateHuisTable extends Migration
     public function up()
     {
         Schema::create('huis', function (Blueprint $table) {
-            $table->id();//->references('huis_id')->on('allowed_users')->onDelete('cascade');
+            $table->id();
             $table->string('naam');
             $table->string('straat');
             $table->string('huisnummer');

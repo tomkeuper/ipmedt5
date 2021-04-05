@@ -17,7 +17,6 @@ class CreateSensorsTable extends Migration
             $table->id();
             $table->string("naam");
             $table->timestamps();
-            $table->integer('huis_id')->references('id')->on('huis')->onDelete('cascade');
             $table->string("enabled");
         });
     }
