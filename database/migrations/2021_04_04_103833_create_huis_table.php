@@ -18,6 +18,7 @@ class CreateHuisTable extends Migration
             $table->string('name');
             $table->string('street');
             $table->string('number');
+            $table->string('postal_code');
             $table->string('place');
             $table->string('alarm')->default('false');
         });
