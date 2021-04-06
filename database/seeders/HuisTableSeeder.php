@@ -19,6 +19,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Reijerskoop",
             'number' => "34",
             'postal_code' => "2771 BP",
+            'image' => "/img/huizen/huis-tom.jpg",
             'place' => "Boskoop"
         ]);
 
@@ -27,6 +28,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Salviahof",
             'number' => "14",
             'postal_code' => "3073 JZ",
+            'image' => "/img/huizen/huis-dogukan.jpg",
             'place' => "Rotterdam"
         ]);
 
@@ -35,6 +37,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Dillenburgdreef",
             'number' => "10",
             'postal_code' => "2224 AC",
+            'image' => "/img/huizen/huis-dennis.jpg",
             'place' => "Katwijk aan Zee"
         ]);
 
@@ -43,6 +46,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Aleidisstraat",
             'number' => "79E",
             'postal_code' => "3021 SG",
+            'image' => "/img/huizen/huis-ebubekir.jpg",
             'place' => "Rotterdam"
         ]);
 
@@ -51,6 +55,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Pleretstraat",
             'number' => "251",
             'postal_code' => "3034 JH",
+            'image' => "/img/huizen/huis-hasan.jpg",
             'place' => "Rotterdam"
         ]);
 
@@ -59,6 +64,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Sandelingstraat",
             'number' => "88",
             'postal_code' => "3073 AT",
+            'image' => "/img/huizen/huis-gerrit.jpg",
             'place' => "Rotterdam"
         ]);
 
@@ -67,6 +73,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Gansstraat",
             'number' => "20B",
             'postal_code' => "2802 CW",
+            'image' => "/img/huizen/huis-brenda.jpg",
             'place' => "Gouda"
         ]);
 
@@ -75,6 +82,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Poelweg",
             'number' => "11",
             'postal_code' => "2362 LK",
+            'image' => "/img/huizen/huis-tijn.jpg",
             'place' => "Warmond"
         ]);
 
@@ -83,6 +91,7 @@ class HuisTableSeeder extends Seeder
             'street' => "Kelvinsstraat",
             'number' => "51",
             'postal_code' => "2723 RJ",
+            'image' => "/img/huizen/huis-remy.jpg",
             'place' => "Zoetermeer"
         ]);
     }
