@@ -28,3 +28,4 @@ require __DIR__.'/auth.php';
 Route::get('/knop', [KnopController::class, 'aanuit']);
 
 Route::get('/huizen', [HuisController::class, 'index']);
+Route::get('/huizen/{id}', [HuisController::class, 'show']);

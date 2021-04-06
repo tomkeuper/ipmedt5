@@ -1,9 +1,9 @@
 @extends('default')
 
 @section('title')
-    {{$sushi->kind . " " . $sushi->name}}
+    {{$huis->name}}
 @endsection
 
 @section('content')
-@include('sushi.components.sushiCard--show')
+@include('huizen.components.huisCard--show')
 @endsection

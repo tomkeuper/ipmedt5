@@ -1,14 +1,14 @@
 <article class="sushiCard a-popup">
     <figure class="sushiCard__figure">
-    <img class="sushiCard__image" src="{{$sushi->image}}" alt="{{$sushi->name . ' ' . $sushi->kind}}"/>
+    <img class="sushiCard__image" src="{{$huis->image}}" alt="{{$huis->name}}"/>
     </figure>
 
     <section class="sushiCard__text">
-        <p>{{$sushi->description}}</p>
+        <p>{{$huis->street}}</p>
     </section>
 
     <section class="sushiCard__btnSection">
         <button class="sushiCard__button"> Order Now </button>
-        <a class="sushiCard__back_to_home" href="/sushi">Back to home</a>
+        <a class="sushiCard__back_to_home" href="/huizen">Back to home</a>
     </section>
 </article>

@@ -11,7 +11,11 @@ class HuisController extends Controller
         return view('huizen.index',[
             'huis' => Huis::all()
         ]);
+    }
 
-        // return Huis::all();
+    public function show($id) {
+        return view('huizen.show',[
+            'huis' => Huis::find($id)
+        ]);
     }
 }
