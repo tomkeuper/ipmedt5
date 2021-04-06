@@ -15,10 +15,10 @@ class CreateHuisTable extends Migration
     {
         Schema::create('huis', function (Blueprint $table) {
             $table->id();
-            $table->string('naam');
-            $table->string('straat');
-            $table->string('huisnummer');
-            $table->string('plaats');
+            $table->string('name');
+            $table->string('street');
+            $table->string('number');
+            $table->string('place');
             $table->string('alarm')->default('false');
         });
     }

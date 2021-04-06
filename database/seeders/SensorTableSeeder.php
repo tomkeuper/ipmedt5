@@ -15,7 +15,19 @@ class SensorTableSeeder extends Seeder
     public function run()
     {
         DB::table('sensors')->insert([
-            
+            'name' => 'Water'
+        ]);
+        
+        DB::table('sensors')->insert([
+            'name' => 'Gas'
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'Temperatuur'
+        ]);
+
+        DB::table('sensors')->insert([
+            'name' => 'Vochtigheid'
         ]);
     }
 }

@@ -15,66 +15,66 @@ class HuisTableSeeder extends Seeder
     public function run()
     {
         DB::table('huis')->insert([
-            'naam' => "Tom's Huis",
-            'straat' => "Reijerskoop",
-            'huisnummer' => "34",
-            'plaats' => "Boskoop",
+            'name' => "Tom's Huis",
+            'street' => "Reijerskoop",
+            'number' => "34",
+            'place' => "Boskoop",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Dogukan's Huis",
-            'straat' => "Salviahof",
-            'huisnummer' => "14",
-            'plaats' => "Rotterdam",
+            'name' => "Dogukan's Huis",
+            'street' => "Salviahof",
+            'number' => "14",
+            'place' => "Rotterdam",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Dennis's Huis",
-            'straat' => "Dillenburgdreef",
-            'huisnummer' => "10",
-            'plaats' => "Katwijk aan Zee",
+            'name' => "Dennis's Huis",
+            'street' => "Dillenburgdreef",
+            'number' => "10",
+            'place' => "Katwijk aan Zee",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Ebubekir's Huis",
-            'straat' => "Aleidisstraat",
-            'huisnummer' => "79E",
-            'plaats' => "Rotterdam",
+            'name' => "Ebubekir's Huis",
+            'street' => "Aleidisstraat",
+            'number' => "79E",
+            'place' => "Rotterdam",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Hasan's Huis",
-            'straat' => "Pleretstraat",
-            'huisnummer' => "251",
-            'plaats' => "Rotterdam",
+            'name' => "Hasan's Huis",
+            'street' => "Pleretstraat",
+            'number' => "251",
+            'place' => "Rotterdam",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Gerrit's Huis",
-            'straat' => "Sandelingstraat",
-            'huisnummer' => "88",
-            'plaats' => "Rotterdam",
+            'name' => "Gerrit's Huis",
+            'street' => "Sandelingstraat",
+            'number' => "88",
+            'place' => "Rotterdam",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Brenda's Huis",
-            'straat' => "Gansstraat",
-            'huisnummer' => "20B",
-            'plaats' => "Utrecht",
+            'name' => "Brenda's Huis",
+            'street' => "Gansstraat",
+            'number' => "20B",
+            'place' => "Utrecht",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Tijn's Huis",
-            'straat' => "Poelweg",
-            'huisnummer' => "11",
-            'plaats' => "Warmond",
+            'name' => "Tijn's Huis",
+            'street' => "Poelweg",
+            'number' => "11",
+            'place' => "Warmond",
         ]);
 
         DB::table('huis')->insert([
-            'naam' => "Remy's Huis",
-            'straat' => "Kelvinsstraat",
-            'huisnummer' => "51",
-            'plaats' => "Wijchen",
+            'name' => "Remy's Huis",
+            'street' => "Kelvinsstraat",
+            'number' => "51",
+            'place' => "Wijchen",
         ]);
     }
 }
