@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAfstandsensorTable extends Migration
+class CreateBeveiligingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateAfstandsensorTable extends Migration
      */
     public function up()
     {
-        Schema::create('afstandsensor', function (Blueprint $table) {
-            $table->string('sensor_on');
+        Schema::create('beveiliging', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();  
+            $table->string("triggered");    
         });
     }
 
@@ -25,6 +27,6 @@ class CreateAfstandsensorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('afstandsensor');
+        Schema::dropIfExists('beveiliging');
     }
 }
