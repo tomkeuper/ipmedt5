@@ -1,7 +1,7 @@
 <li class="a-popup u-list-style-none gridCard">
     <a href="/huizen/{{$huis->id}}">
         <article>
-            <header class="gridCard__header u-flex-v-center">
+            <header class="gridCard__header u-flex-h-center u-flex-v-center">
                 <h2 class="gridCard__heading">{{$huis->name}}</h2>
             </header>
             <figure class="gridCard__figure">
