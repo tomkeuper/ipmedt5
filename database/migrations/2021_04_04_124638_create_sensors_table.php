@@ -17,7 +17,6 @@ class CreateSensorsTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("enabled")->nullable();
-            $table->integer("value")->nullable();
             $table->timestamps();
         });
     }
