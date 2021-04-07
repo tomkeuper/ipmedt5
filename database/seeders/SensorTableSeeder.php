@@ -20,7 +20,18 @@ class SensorTableSeeder extends Seeder
             'sensor_id' => "1"
         ]);
 
+        \DB::table('sensors')->insert([
+            'naam' => "Water sensor",
+            'huis_id' => "1",
+            'enabled' => "true",
+            'sensor_id' => "2"
+        ]);
 
-        
+        \DB::table('sensors')->insert([
+            'naam' => "Gas sensor",
+            'huis_id' => "1",
+            'enabled' => "true",
+            'sensor_id' => "3"
+        ]);
     }
 }
