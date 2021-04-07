@@ -9,5 +9,5 @@ class Gas extends Model
 {
     use HasFactory;
 
-    protected $table="paniek_knop"
+    protected $table="paniek_knop";
 }
