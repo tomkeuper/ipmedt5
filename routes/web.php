@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\KnopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
+Route::get('/knop/{id}/{boolean}', [KnopController::class, 'aanuit']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-Route::get('/knop', 'App\Http\Controllers\KnopController@aanuit');
