@@ -16,5 +16,13 @@ class PaniekTableSeeder extends Seeder
         \DB::table('paniek_knop')->insert([
             'btn_pressed' => 'false'
         ]);
+
+        \DB::table('paniek_knop')->insert([
+            'btn_pressed' => 'false'
+        ]);
+
+        \DB::table('paniek_knop')->insert([
+            'btn_pressed' => 'false'
+        ]);
     }
 }

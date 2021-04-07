@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             PaniekTableSeeder::class,
             HuisTableSeeder::class,
             AllowedUserSeeder::class,
-            UserTableSeeder::class,
+            UsersTableSeeder::class,
             SensorTableSeeder::class,
         ]);
     }
