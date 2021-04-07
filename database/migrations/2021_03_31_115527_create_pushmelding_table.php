@@ -15,9 +15,12 @@ class CreatePushmeldingTable extends Migration
     {
         Schema::create('pushmelding', function (Blueprint $table) {
             $table->id();
-            $table->string("titel");
-            $table->string("bericht");
+            $table->string("title");
+            $table->string("message");
+            $table->string("type");
             $table->timestamps();
+
+            // foreign key naar huis_id
         });
     }
 

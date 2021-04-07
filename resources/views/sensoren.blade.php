@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <button><a href="/afstandsensor">Afstandsensor aan/uit</a></button>
+    <button><a href="/pushmelding">Krijg melding</a></button>
 </body>
 </html>

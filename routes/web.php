@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'SensorenController@show');
 
+Route::get('/pushmelding', 'PushmeldingController@stuurMelding');
+
 Route::get('/afstandsensor', 'SensorenController@afstandSensor');

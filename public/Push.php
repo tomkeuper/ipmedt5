@@ -1,10 +1,10 @@
 <?php
 class Push {
 	private $host  = 'localhost';
-    private $user  = 'root';
-    private $password   = "";
-    private $database  = "phpzag_demo";    
-    private $notifTable = 'notif';
+    private $user  = 'tijn';
+    private $password   = "xcvxcv";
+    private $database  = "mantelzorg";    
+    private $notifTable = 'pushmelding';
 	private $userTable = 'notif_user';
 	private $dbConnect = false;
     public function __construct(){
@@ -45,7 +45,7 @@ class Push {
         return  $this->getData($sqlQuery);
 	}	
 	public function saveNotification($title, $msg, $time, $loop, $loop_every, $user){
-		$sqlQuery = "INSERT INTO ".$this->notifTable."(title, notif_msg, notif_time, notif_repeat, notif_loop, username) VALUES('$title', '$msg', '$time', '$loop', '$loop_every', '$user')";
+		$sqlQuery = "INSERT INTO ".$this->notifTable."(title, bericht) VALUES('$titel', '$bericht')";
 		$result = mysqli_query($this->dbConnect, $sqlQuery);
 		if(!$result){
 			return ('Error in query: '. mysqli_error());
@@ -54,7 +54,7 @@ class Push {
 		}
 	}	
 	public function updateNotification($id, $nextTime) {		
-		$sqlUpdate = "UPDATE ".$this->notifTable." SET notif_time = '$nextTime', publish_date=CURRENT_TIMESTAMP(), notif_loop = notif_loop-1 WHERE id='$id')";
+		// $sqlUpdate = "UPDATE ".$this->notifTable." SET notif_time = '$nextTime', publish_date=CURRENT_TIMESTAMP(), notif_loop = notif_loop-1 WHERE id='$id')";
 		mysqli_query($this->dbConnect, $sqlUpdate);
 	}	
 }
