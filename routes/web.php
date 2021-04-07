@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\KnopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,3 @@ use \App\Http\Controllers\KnopController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
-Route::get('/knop/{id}/{boolean}', [KnopController::class, 'aanuit']);
