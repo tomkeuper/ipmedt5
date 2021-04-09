@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             AllowedUserSeeder::class,
             UsersTableSeeder::class,
             SensorTableSeeder::class,
+            TemperatuurTableSeeder::class,
+            VochtigheidTableSeeder::class
         ]);
     }
 }
