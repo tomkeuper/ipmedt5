@@ -14,7 +14,7 @@ function showNotification() {
                     var theurl = data_notif[i]['url'];
                     var notifikasi = new Notification(data_notif[i]['title'], {
                         icon: data_notif[i]['icon'],
-                        body: data_notif[i]['msg'],
+                        body: data_notif[i]['message'],
                     });
                     notifikasi.onclick = function () {
                         window.open(theurl); 
