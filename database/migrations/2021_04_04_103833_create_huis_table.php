@@ -23,6 +23,7 @@ class CreateHuisTable extends Migration
             $table->string('description');
             $table->string('image');
             $table->string('alarm')->default('false');
+            $table->string('mantelzorger')->references('id')->on('users');
         });
     }
 
