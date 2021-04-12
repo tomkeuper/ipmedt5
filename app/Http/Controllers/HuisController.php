@@ -9,9 +9,9 @@ use Auth;
 class HuisController extends Controller
 {
     public function index() {
-        $user_id = Auth::user()->id;
+        $user = Auth::user()->id;
         return view('dashboard',[
-            'huis' => Huis::all()->where('mantelzorger', '==', $user_id),
+            'huis' => Huis::all()->where('mantelzorger', '==', $user),
             'user' => Auth::user()
         ]);
     }
