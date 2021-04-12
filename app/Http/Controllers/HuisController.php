@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Huis;
+use App\Models\Huis;
+use Auth;
 
 class HuisController extends Controller
 {
     public function index() {
-        return view('huizen.index',[
-            'huis' => Huis::all()
+        $user_id = Auth::user()->id;
+        return view('dashboard',[
+            'huis' => Huis::all()->where('mantelzorger', '==', $user_id),
+            'user' => Auth::user()
         ]);
     }
 
