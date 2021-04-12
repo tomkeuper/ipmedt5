@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 class PushmeldingController extends Controller
 {
     public function stuurMelding() {
-        return view('pushnotificatie/pushmelding');
+        $beveiliging = Beveiliging::all()->first();
+
+        if($beveiliging->triggered == 'true') {
+            
+        } else {
+            
+        }
+        $beveiliging->save();
+        return view('pushmelding');
     }
 }

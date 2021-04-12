@@ -7,14 +7,9 @@
     <title>Pushmelding testversie</title>
 </head>
 <body>
-<?php 
-SESSION_START();
-include('header.php');
-?>
 <script src="{{ URL::asset('js/pushmelding.js') }}"></script>
-<div class="container">	
-</div>	
+    <div class="container">	
 
-    
+    </div>	 
 </body>
 </html>
