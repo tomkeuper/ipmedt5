@@ -14,20 +14,25 @@ class SensorTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('sensors')->insert([
-            'name' => 'Water'
-        ]);
-        
-        DB::table('sensors')->insert([
-            'name' => 'Gas'
-        ]);
-
-        DB::table('sensors')->insert([
-            'name' => 'Temperatuur'
+        \DB::table('sensors')->insert([
+            'naam' => "Paniek Knop",
+            'huis_id' => "1",
+            'enabled' => "true",
+            'sensor_id' => "1"
         ]);
 
-        DB::table('sensors')->insert([
-            'name' => 'Vochtigheid'
+        \DB::table('sensors')->insert([
+            'naam' => "Water sensor",
+            'huis_id' => "1",
+            'enabled' => "true",
+            'sensor_id' => "2"
+        ]);
+
+        \DB::table('sensors')->insert([
+            'naam' => "Gas sensor",
+            'huis_id' => "1",
+            'enabled' => "true",
+            'sensor_id' => "3"
         ]);
     }
 }

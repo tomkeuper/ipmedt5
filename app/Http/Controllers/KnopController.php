@@ -3,16 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Knop;
 
 class KnopController extends Controller
 {
-    public function aanuit(){
-        $knop = \App\Models\Knop::all()->first();
+    public function aanuit($id,  $boolean){
+        $knop = \App\Models\Knop::find($id);
 
-        if ($knop->btn_pressed == 'false'){
+        if (is_null($boolean)){
+            if ($knop->btn_pressed == 'false'){
+                $knop->btn_pressed = 'true';
+            }
+            else {
+                $knop->btn_pressed = 'false';
+            }
+        } elseif ($boolean == "true") {
             $knop->btn_pressed = 'true';
-        }
-        else {
+        } else {
             $knop->btn_pressed = 'false';
         }
         $knop->save();
