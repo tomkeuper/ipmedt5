@@ -12,15 +12,18 @@ class PushmeldingTableSeeder extends Seeder
     public function run()
     {
         DB::table('pushmelding')->insert([
-            "title" => "testtitel",
-            "message" => "test bericht dat nergens over gaat",
+            "alarm" => "disabled",
             "type" => "inbraakalarm",
         ]);
 
         DB::table('pushmelding')->insert([
-            "title" => "testtitel",
-            "message" => "test bericht dat nergens over gaat",
+            "alarm" => "disabled",
             "type" => "paniekknop",
+        ]);
+
+        DB::table('pushmelding')->insert([
+            "alarm" => "disabled",
+            "type" => "andere soort?",
         ]);
     }
 }

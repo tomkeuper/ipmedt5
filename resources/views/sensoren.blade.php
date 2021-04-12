@@ -8,5 +8,7 @@
 </head>
 <body>
     <button><a href="/pushmelding">Krijg melding</a></button>
+
+    <div style="border: solid 1px black; width: 50px; height: 50px;"></div>
 </body>
 </html>

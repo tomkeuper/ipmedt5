@@ -15,8 +15,7 @@ class CreatePushmeldingTable extends Migration
     {
         Schema::create('pushmelding', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->string("message");
+            $table->string("alarm");
             $table->string("type");
             $table->timestamps();
 
