@@ -15,7 +15,7 @@ class CreatePaniekKnopTable extends Migration
     {
         Schema::create('paniek_knop', function (Blueprint $table) {
             $table->id();
-            $table->string('btn_pressed');
+            $table->string('btn_pressed')->default('false');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

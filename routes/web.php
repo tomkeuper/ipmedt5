@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\HuisController;
+use App\Http\Controllers\KnopController;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\KnopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/knop', [KnopController::class, 'aanuit']);
 Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
 Route::get('/knop/{id}/{boolean}', [KnopController::class, 'aanuit']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [HuisController::class, 'index'])
+                ->middleware(['auth'])
+                ->name('dashboard');
 
 require __DIR__.'/auth.php';
 
+Route::get('/huizen', [HuisController::class, 'index']);
+Route::get('/huizen/{id}', [HuisController::class, 'show']);

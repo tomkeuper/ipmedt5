@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Knop extends Model
 {
     use HasFactory;
-
-    protected $table="paniek_knop";
+    protected $table = "paniek_knop";
 }

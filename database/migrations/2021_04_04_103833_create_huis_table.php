@@ -14,12 +14,16 @@ class CreateHuisTable extends Migration
     public function up()
     {
         Schema::create('huis', function (Blueprint $table) {
-            $table->id();//->references('huis_id')->on('allowed_users')->onDelete('cascade');
-            $table->string('naam');
-            $table->string('straat');
-            $table->string('huisnummer');
-            $table->string('plaats');
+            $table->id();
+            $table->string('name');
+            $table->string('street');
+            $table->string('number');
+            $table->string('postal_code');
+            $table->string('place');
+            $table->string('description');
+            $table->string('image');
             $table->string('alarm')->default('false');
+            $table->string('mantelzorger')->references('id')->on('users');
         });
     }
 
