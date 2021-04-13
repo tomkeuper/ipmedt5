@@ -9,5 +9,5 @@ class Temperatuur extends Model
 {
     use HasFactory;
 
-    protected $table="temperatuur";
+    protected $table = "temperatuur";
 }
