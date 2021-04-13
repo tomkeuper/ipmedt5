@@ -9,5 +9,5 @@ class Vochtigheid extends Model
 {
     use HasFactory;
 
-    protected $table="vochtigheid";
+    protected $table = "vochtigheid";
 }

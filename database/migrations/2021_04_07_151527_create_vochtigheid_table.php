@@ -17,6 +17,7 @@ class CreateVochtigheidTable extends Migration
             $table->id();
             $table->string('updated_at');
             $table->string('value');
+            $table->integer('huis_id')->references('id')->on('huis')->onDelete('cascade');
         });
     }
 

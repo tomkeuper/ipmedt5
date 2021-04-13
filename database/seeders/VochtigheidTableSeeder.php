@@ -16,10 +16,12 @@ class VochtigheidTableSeeder extends Seeder
         \DB::table('vochtigheid')->insert([
             'updated_at' => "13:10:27",
             'value' => "54",
+            'huis_id' => '1'
         ]);
         \DB::table('vochtigheid')->insert([
             'updated_at' => "13:10:23",
             'value' => "52",
+            'huis_id' => '2'
         ]);
     }
 }
