@@ -1,4 +1,4 @@
-<li class="a-popup u-list-style-none gridCard">
+<li class="a-popup u-list-style-none gridCard" data-alarm={{$huis->alarm}}>
     <a href="/huizen/{{$huis->id}}">
         <article>
             <figure class="gridCard__figure">
@@ -10,10 +10,6 @@
             <section class="gridCard__textSection u-flex-h-center u-flex-v-center">
                 <p class="gridCard__text">{{$huis->street}} {{$huis->number}}, {{$huis->postal_code}} {{$huis->place}}</p>
             </section>
-            <!-- <section class="gridCard__errorNotification">
-                <img class="gridCard__errorImage" src="/img/checkmark/check.png" alt="{{$huis->name}}">
-                <button class="gridcard__button">Hallo</button>
-            </section> -->
         </article>
     </a>
 </li>
