@@ -15,8 +15,9 @@ class CreateSensorsTable extends Migration
     {
         Schema::create('sensors', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("enabled")->nullable();
+            $table->string("naam");
+            $table->string("enabled")->default('false');
+            $table->integer('huis_id')->references('id')->on('huis')->onDelete('cascade');
             $table->timestamps();
         });
     }
