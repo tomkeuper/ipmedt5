@@ -5,11 +5,12 @@ import serial
 import os
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="laravel",
-    passwd="laravel",
-    database="mantelzorg"
+    host="83.85.113.219",
+    user="ipmedt5project",
+    passwd="m1K4F1tJYRmPnBvK",
+    database="ipmedt5project"
 )
+
 port = serial.Serial("/dev/ttyACM0", baudrate=9600, timeout=3.0)
 
 mycursor = mydb.cursor()
