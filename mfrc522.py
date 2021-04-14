@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
     user="ipmedt5project",
     passwd="m1K4F1tJYRmPnBvK",
     database="ipmedt5project"
-    )
+)
 
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
 
