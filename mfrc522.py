@@ -22,7 +22,7 @@ while True:
     rcv = port.readline().strip()
 
     if (rcv == "CC188822"):
-        mycursor.execute("SELECT enabled FROM sensors WHERE huis_id = '1' AND id = '1';")
+        mycursor.execute("SELECT enabled FROM sensors WHERE huis_id = '2' AND id = '1';")
         for x in mycursor:
             enabled = x[0]
             if enabled == "true":
