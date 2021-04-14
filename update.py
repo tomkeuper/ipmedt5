@@ -9,5 +9,5 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("UPDATE count SET amount = amount + 1;")
+mycursor.execute("UPDATE afstandsensor SET sensor_on = uit;")
 mydb.commit()
