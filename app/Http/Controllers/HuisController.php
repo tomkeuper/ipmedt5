@@ -7,6 +7,7 @@ use App\Models\Huis;
 use App\Models\Sensor;
 use App\Models\Temperatuur;
 use App\Models\Vochtigheid;
+use App\Models\Beveiliging;
 use Auth;
 
 class HuisController extends Controller
@@ -27,6 +28,7 @@ class HuisController extends Controller
             'gas' => Sensor::all()->where('huis_id', '==', $id)->where('sensor_id', '==', '3'),
             'temperatuur' => Temperatuur::all()->where('huis_id', '==', $id),
             'vochtigheid' => Vochtigheid::all()->where('huis_id', '==', $id),
+            'beveiliging' => Beveiliging::all()->where('huis_id', '==', $id),
         ]);
     }
 }
