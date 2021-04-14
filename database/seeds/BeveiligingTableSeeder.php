@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class AfstandTableSeeder extends Seeder
+class BeveiligingTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,8 @@ class AfstandTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('afstandsensor')->insert([
-            'sensor_on' => "aan"
+        DB::table('beveiliging')->insert([
+            'triggered' => "false"
         ]);
     }
 }

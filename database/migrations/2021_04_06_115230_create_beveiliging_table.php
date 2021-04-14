@@ -16,7 +16,7 @@ class CreateBeveiligingTable extends Migration
         Schema::create('beveiliging', function (Blueprint $table) {
             $table->id();
             $table->timestamps();  
-            $table->string("triggered");    
+            $table->string("triggered")->default("false");    
         });
     }
 
