@@ -15,7 +15,6 @@ class BeveiligingTableSeeder extends Seeder
     public function run()
     {
         DB::table('beveiliging')->insert([
-            'triggered' => "false",
             'huis_id' => '1'
         ]);
     }

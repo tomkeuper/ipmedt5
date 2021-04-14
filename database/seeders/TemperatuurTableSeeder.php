@@ -18,11 +18,5 @@ class TemperatuurTableSeeder extends Seeder
             'value' => "21",
             'huis_id' => 1
         ]);
-        
-        \DB::table('temperatuur')->insert([
-            'updated_at' => "13:10:23",
-            'value' => "20.5",
-            'huis_id' => 2
-        ]);
     }
 }
