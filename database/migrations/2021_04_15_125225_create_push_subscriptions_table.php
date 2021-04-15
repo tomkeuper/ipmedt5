@@ -17,10 +17,11 @@ class CreatePushSubscriptionsTable extends Migration
             $table->charset ='utf8';
             $table->collation = 'utf8_unicode_ci';
             $table->increments('id');
-            $table->integer('guest_id')->unsigned()->index();
+            $table->morphs('subscribable');
             $table->string('endpoint', 255)->unique();
             $table->string('public_key')->nullable();
             $table->string('auth_token')->nullable();
+            $table->string('content_encoding')->nullable();
             $table->timestamps();
         });
     }
