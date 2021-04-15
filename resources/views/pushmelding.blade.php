@@ -7,9 +7,11 @@
     <title>Pushmelding testversie</title>
 </head>
 <body>
-<script src="{{ URL::asset('js/pushmelding.js') }}"></script>
-    <div class="container">	
 
-    </div>	 
+    <h1>tekst</h1> 
+<!-- @auth -->
+    
+<!-- @endauth -->
+<script src="{{ asset('js/enable-push.js') }}" defer></script>
 </body>
 </html>
