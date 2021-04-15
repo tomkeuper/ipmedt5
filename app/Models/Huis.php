@@ -9,4 +9,5 @@ class Huis extends Model
 {
     use HasFactory;
     protected $table = "huis";
+    public $timestamps = false;
 }
