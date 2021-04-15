@@ -50,7 +50,6 @@ class updateHouseStatus extends Command
         $sensors = Sensor::all()->where('enabled', '==', 'true');
 
         foreach($sensors as $sensor) {
-            info("{$sensor}");
             $sensorval = Knop::find($sensor->sensor_id);
             info("{$sensorval}");
 
@@ -58,15 +57,37 @@ class updateHouseStatus extends Command
             if ($sensorval->btn_pressed == "true"){
                 info("Sensor is true");
                 $alarmvalue = true;
-
-
                 // Zet alarm value van huis op true
                 $huis = Huis::find($sensor->huis_id);
                 $huis->alarm = 'true';
                 $huis->save();
             }
-            elseif ($sensorval->btn_pressed == "false"){
-                info("Sensor is false");
+        }
+
+
+        // Check of er een alarm aan staat dat uit moet zijn
+        foreach(Huis::all() as $huisje) {
+            if ($huisje->alarm == 'true'){
+
+                //haal sensoren op voor het huis
+                $sen_lijst = $sensors->where('huis_id', '==', $huisje->id);
+
+                // var om de waarde van alarm te checken
+                $stayTrue = false;
+                foreach($sen_lijst as $sen){
+                    $sensorval2 = Knop::find($sen->sensor_id);
+                    if($sensorval2->btn_pressed == 'true'){
+
+                        // als er nog steeds een knop is ingedrukt moet er niks gebeuren
+                        $stayTrue = true;
+                    }
+                }
+
+                // alarm moet alleen false zijn als alle triggers weg zijn
+                if (!$stayTrue){
+                    $huisje->alarm = 'false';
+                    $huisje->save();
+                }
             }
         }
 
