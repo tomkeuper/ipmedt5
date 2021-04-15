@@ -11,4 +11,5 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 mycursor.execute("UPDATE beveiliging SET triggered = true;")
+print("alarm")
 mydb.commit()

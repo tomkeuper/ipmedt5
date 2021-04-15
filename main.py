@@ -17,7 +17,7 @@ mycursor = mydb.cursor()
 
 while True:
     
-    rcv = port.readLine().strip()
+    rcv = port.readline().strip()
     if (rcv == 'a'):
         os.system("python update.py")
 
