@@ -1,9 +1,6 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
-use DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -26,6 +23,13 @@ class UsersTableSeeder extends Seeder
             'email' => 's1122842@student.hsleiden.nl',
             'password' => bcrypt('dogukan'),
             'token' => '54 A2 EC 2E' // RFID card
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Tijn',
+            'email' => 's1114748@student.hsleiden.nl',
+            'password' => "xcvxcv",
+            'token' => '54 A2 EC 2G' 
         ]);
     }
 }

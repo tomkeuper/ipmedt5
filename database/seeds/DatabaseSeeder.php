@@ -12,14 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UsersTableSeeder::class,
-            HuisTableSeeder::class,
-            SensorTableSeeder::class,
-            PaniekTableSeeder::class,
-            TemperatuurTableSeeder::class,
-            VochtigheidTableSeeder::class,
             BeveiligingTableSeeder::class,
-            PushmeldingTableSeeder::class
+            UsersTableSeeder::class
         ]);
     }
 }

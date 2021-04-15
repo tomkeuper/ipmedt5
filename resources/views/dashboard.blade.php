@@ -19,5 +19,11 @@
         @foreach($huis as $huis)
             @include('huizen.components.huisCard--index')
         @endforeach
+
+        
     </ul>
+    <!-- @auth -->
+    
+    <!-- @endauth -->
+    <script src="{{ asset('js/enable-push.js') }}" defer></script>
 </x-app-layout>
