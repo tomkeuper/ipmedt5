@@ -16,7 +16,8 @@ class SensorTableSeeder extends Seeder
         \DB::table('sensors')->insert([
             'naam' => "Paniek Knop",
             'huis_id' => "1",
-            'enabled' => "true"
+            'enabled' => "true",
+            'sensor_id' => "1"
         ]);
 
         \DB::table('sensors')->insert([
