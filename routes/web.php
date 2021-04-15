@@ -28,4 +28,5 @@ Route::get('/knop/{id}/{boolean}', [KnopController::class, 'aanuit']);
 Route::get('/huizen', [HuisController::class, 'index']);
 Route::get('/huizen/{id}', [HuisController::class, 'show']);
 
-Route::post('/push', 'PushController@store');
+Route::post('/push', 'App\Http\Controllers\PushController@store');
+Route::get('/push', 'App\Http\Controllers\PushController@push')->name('push');

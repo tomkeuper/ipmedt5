@@ -27,12 +27,5 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('dogukan'),
             'token' => '54 A2 EC 2E' // RFID card
         ]);
-
-        DB::table('users')->insert([
-            'name' => 'Tijn',
-            'email' => 's1114748@student.hsleiden.nl',
-            'password' => "xcvxcv",
-            'token' => '54 A2 EC 2G' // RFID card
-        ]);
     }
 }

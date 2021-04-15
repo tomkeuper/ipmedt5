@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Notifications\PushNotif;
+use App\Models\User;
+use Auth;
+use Notification;
 
 class PushController extends Controller
 {
@@ -30,4 +34,9 @@ class PushController extends Controller
           
           return response()->json(['success' => true],200);
       }
+
+      public function push(){
+        Notification::send(User::all(),new PushNotif);
+        return redirect()->back();
+    }
 }
