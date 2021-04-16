@@ -15,9 +15,15 @@
         </div>
     </div>
 
+    
+
     <ul class="u-grid-12 u-grid-gap-2">
         @foreach($huis as $huis)
             @include('huizen.components.huisCard--index')
         @endforeach
     </ul>
+    <a href="{{route('push')}}" class="btn btn-outline-primary btn-block">Make a Push Notification!</a>
+    @auth
+    <script src="{{ asset('js/enable-push.js') }}" defer></script>
+    @endauth
 </x-app-layout>

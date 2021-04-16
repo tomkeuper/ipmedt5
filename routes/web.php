@@ -30,8 +30,9 @@ Route::get('/dashboard', [HuisController::class, 'index'])
 
 require __DIR__.'/auth.php';
 
+
 Route::get('/huizen', [HuisController::class, 'index']);
 Route::get('/huizen/{id}', [HuisController::class, 'show']);
 
-
-Route::get('/', [AlarmController::class, 'getAlarmen']);
+Route::post('/push', 'App\Http\Controllers\PushController@store');
+Route::get('/push', 'App\Http\Controllers\PushController@push')->name('push');
