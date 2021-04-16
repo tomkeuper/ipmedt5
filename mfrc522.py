@@ -22,14 +22,16 @@ while True:
     rcv = port.readline().strip()
 
     if (rcv == "CC188822"):
-        mycursor.execute("SELECT enabled FROM sensors WHERE huis_id = '2' AND id = '1';")
+        mycursor.execute("SELECT enabled FROM sensors WHERE huis_id = '1' AND id = '1';")
         for x in mycursor:
             enabled = x[0]
             if enabled == "true":
                 mycursor.execute("UPDATE sensors SET enabled = 'false' WHERE huis_id = '1';")
+                mycursor.execute("UPDATE huis SET alarm = 'false' WHERE id = '1';")
                 mydb.commit()
-                print("Alle sensoren staan nu uit.")
+                print("Alle sensoren staan aan. Het probleem is verholpen.")
             elif enabled == "false":
                 mycursor.execute("UPDATE sensors SET enabled = 'true' WHERE huis_id = '1';")
+                mycursor.execute("UPDATE huis SET alarm = 'true' WHERE id = '1';")
                 mydb.commit()
-                print("Alle sensoren staan nu aan.")
+                print("Sensoren staan uit. Het huis heeft een probleem!")

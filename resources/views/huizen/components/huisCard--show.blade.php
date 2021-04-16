@@ -43,10 +43,10 @@
             @endforeach
         </section>
         <section class="houseCard__beveiliging">
-            <h1 class="houseCard__heading">Inraaksensor</h1>
+            <h1 class="houseCard__heading">Beveiliging</h1>
             @foreach($beveiliging as $beveiliging)
             <article class="houseCard__sensorFlex">
-                <p class="houseCard__paragraph">Afstand</p>
+                <p class="houseCard__paragraph">Inbraaksensor</p>
                 <p class="houseCard__paragraph">{{$beveiliging->triggered}}</p>
             </article>
             @endforeach
