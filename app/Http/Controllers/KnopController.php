@@ -7,7 +7,7 @@ use App\Models\Knop;
 
 class KnopController extends Controller
 {
-    public function aanuit($id,  $boolean){
+    public function aanuit($id,  $boolean = null){
         $knop = \App\Models\Knop::find($id);
 
         if (is_null($boolean)){
