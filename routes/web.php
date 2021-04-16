@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HuisController;
 use App\Http\Controllers\KnopController;
+use App\Http\Controllers\AlarmController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return redirect("/alarmen");
+// });
 
 Route::get('/knop', [KnopController::class, 'aanuit']);
 Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
@@ -31,3 +32,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/huizen', [HuisController::class, 'index']);
 Route::get('/huizen/{id}', [HuisController::class, 'show']);
+
+
+Route::get('/', [AlarmController::class, 'getAlarmen']);
