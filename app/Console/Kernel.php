@@ -27,6 +27,12 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
     }
 
+    //schedule command to update the database every second.
+    protected function shortSchedule(\Spatie\ShortSchedule\ShortSchedule $shortSchedule)
+    {
+        $shortSchedule->command('updateHouseStatus')->everySecond();
+    }
+
     /**
      * Register the commands for the application.
      *
