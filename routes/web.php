@@ -15,19 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/knop', [KnopController::class, 'aanuit']);
-Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
-Route::get('/knop/{id}/{boolean}', [KnopController::class, 'aanuit']);
-
-Route::get('/dashboard', [HuisController::class, 'index'])
+Route::get('/', [HuisController::class, 'index'])
                 ->middleware(['auth'])
                 ->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/knop', [KnopController::class, 'aanuit']);
+Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
+Route::get('/knop/{id}/{boolean}', [KnopController::class, 'aanuit']);
 
 Route::get('/huizen', [HuisController::class, 'index']);
 Route::get('/huizen/{id}', [HuisController::class, 'show']);

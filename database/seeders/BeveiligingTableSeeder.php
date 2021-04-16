@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use DB;
 
-class TemperatuurTableSeeder extends Seeder
+class BeveiligingTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,10 +14,8 @@ class TemperatuurTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('temperatuur')->insert([
-            'updated_at' => "13:10:23",
-            'value' => "21",
-            'huis_id' => 1
+        DB::table('beveiliging')->insert([
+            'huis_id' => '1'
         ]);
     }
 }

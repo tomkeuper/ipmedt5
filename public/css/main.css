@@ -28,7 +28,6 @@ body {
     background: white;
     border-radius: .5rem;
 }
-
 @media(max-width: 56.25rem) {
     .gridCard {
         grid-column: span 6;
@@ -104,7 +103,7 @@ body {
 */
 
 .houseCard {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -113,17 +112,6 @@ body {
     box-shadow: 0 0.5rem 1rem black;
     position: relative;
 }
-@media(max-width: 37.5rem) {
-    .houseCard {
-        width: 35rem;
-    }
-}
-@media(max-width: 25rem) {
-    .houseCard {
-        width: 25rem;
-    }
-}
-
 .houseCard::after {
     content: "";
     width: 5rem;
@@ -133,6 +121,16 @@ body {
     right: 0;
     background-color: rgba(7, 104, 159, 0.3);
     clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+@media(max-width: 87.5rem) {
+    .houseCard {
+        width: 70%;
+    }
+}
+@media(max-width: 31.5rem) {
+    .houseCard {
+        width: 100%;
+    }
 }
 
 .houseCard__figure {
@@ -154,6 +152,7 @@ body {
 .houseCard__textSection {
     font-size: 1.2rem;
     margin-top: .5rem;
+    text-align: center;
 }
 
 .houseCard__back_to_home {
@@ -169,6 +168,12 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 2rem;
 }
+@media(max-width: 62.5rem) {
+    .houseCard__sensor-beveiliging {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
 
 .houseCard__sensor {
     width: 20rem;
@@ -176,12 +181,36 @@ body {
     box-shadow: 0 0.5rem 2rem black;
     padding: 0 1rem;
 }
+.houseCard__sensor[data-sensor=false] {
+    background: red;
+    color: white;
+}
+@media(max-width: 62.5rem) {
+    .houseCard__sensor {
+        width: 25rem;
+    }
+}
+@media(max-width: 37.5rem) {
+    .houseCard__sensor {
+        width: 15rem;
+    }
+}
 
 .houseCard__beveiliging {
     width: 20rem;
     background: rgba(7, 104, 159, 0.3);
     box-shadow: 0 0.5rem 1rem black;
     padding: 0 1rem;
+}
+@media(max-width: 62.5rem) {
+    .houseCard__beveiliging {
+        width: 25rem;
+    }
+}
+@media(max-width: 37.5rem) {
+    .houseCard__beveiliging {
+        width: 15rem;
+    }
 }
 
 .houseCard__heading {
@@ -196,62 +225,6 @@ body {
 .houseCard__paragraph {
     font-size: 1.2rem;
     padding: .5rem 0;
-}
-
-/*
-|--------------------------------------------------------------------------
-| Create Form
-|--------------------------------------------------------------------------
-*/
-
-.create-form {
-    width: 40%;
-    min-height: 70vh;
-    margin: 0 auto;
-    box-shadow: 0 0.5rem 2rem black;
-    display: flex;
-    color: #eeeeee;
-}
-@media (max-width: 62.5rem) {
-    .create-form {
-        width: 90;
-    }
-}
-
-.create-form__form {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.create-form__section {
-    margin-top: 4rem;
-    font-size: 140%;
-    width: 100%;
-}
-
-.create-form__input {
-    display: block;
-    margin-top: .5rem;
-    width: 80%;
-    font-size: 80%;
-    font-weight: 400;
-    font-family: sans-serif;
-}
-.create-form__input--big {
-    height: 20rem;
-}
-
-.create-form__button {
-    font-size: 100%;
-    width: 25rem;
-    height: 6rem;
-    box-sizing: border-box;
-    background: #07689f;
-    border: none;
-    color: #eeeeee;
-    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.7);
-    transition: 0.2s all;
-    margin-bottom: 2rem;
 }
 
 /*
@@ -276,7 +249,13 @@ body {
     margin-right: 2rem;
     margin: 0 auto;
 }
-@media (min-width: 1024px) {
+@media (min-width: 40rem) {
+    .u-grid-12 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+@media (min-width: 64rem) {
     .u-grid-12 {
         padding-left: 2rem;
         padding-right: 2rem;
