@@ -27,11 +27,9 @@ while True:
             enabled = x[0]
             if enabled == "true":
                 mycursor.execute("UPDATE sensors SET enabled = 'false' WHERE huis_id = '1';")
-                mycursor.execute("UPDATE huis SET alarm = 'false' WHERE id = '1';")
                 mydb.commit()
                 print("Alle sensoren staan aan. Het probleem is verholpen.")
             elif enabled == "false":
                 mycursor.execute("UPDATE sensors SET enabled = 'true' WHERE huis_id = '1';")
-                mycursor.execute("UPDATE huis SET alarm = 'true' WHERE id = '1';")
                 mydb.commit()
                 print("Sensoren staan uit. Het huis heeft een probleem!")
