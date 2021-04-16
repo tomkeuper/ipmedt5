@@ -9,44 +9,50 @@
         <p class="houseCard__text">{{$huis->street}} {{$huis->number}}, {{$huis->postal_code}} {{$huis->place}}</p>
     </section>
     <section class="houseCard__sensor-beveiliging">
-        <section class="houseCard__sensor">
+        <section class="houseCard__sensor" data-sensor="{{$sensor->enabled}}">
             <h1 class="houseCard__heading">Sensoren</h1>
-            <article class="houseCard__sensorFlex">
-                @foreach($gas as $gas)
+            @foreach($gas as $gas)
+            <article class="houseCard__sensorFlex"">
                 <p class="houseCard__paragraph">Gas level</p>
-                <p class="houseCard__paragraph">{{$gas->enabled}}</p>
-                @endforeach
+                <p class="houseCard__paragraph">{{$gas->btn_pressed}}</p>
             </article>
+            @endforeach
+            @foreach($water as $water)
             <article class="houseCard__sensorFlex">
-                @foreach($water as $water)
                 <p class="houseCard__paragraph">Water level</p>
-                <p class="houseCard__paragraph">{{$water->enabled}}</p>
-                @endforeach
+                <p class="houseCard__paragraph">{{$water->btn_pressed}}</p>
             </article>
+            @endforeach
+            @foreach($temperatuur as $temperatuur)
             <article class="houseCard__sensorFlex">
-                @foreach($temperatuur as $temperatuur)
                 <p class="houseCard__paragraph">Temperatuur</p>
                 <p class="houseCard__paragraph">{{$temperatuur->value}}</p>
-                @endforeach
             </article>
+            @endforeach
+            @foreach($vochtigheid as $vochtigheid)
             <article class="houseCard__sensorFlex">
-                @foreach($vochtigheid as $vochtigheid)
                 <p class="houseCard__paragraph">Vochtigheid</p>
                 <p class="houseCard__paragraph">{{$vochtigheid->value}}</p>
-                @endforeach
             </article>
+            @endforeach
+            @foreach($paniek as $paniek)
             <article class="houseCard__sensorFlex">
-                @foreach($paniek as $paniek)
                 <p class="houseCard__paragraph">Paniek knop</p>
-                <p class="houseCard__paragraph">{{$paniek->enabled}}</p>
-                @endforeach
+                <p class="houseCard__paragraph">{{$paniek->btn_pressed}}</p>
             </article>
+            @endforeach
         </section>
         <section class="houseCard__beveiliging">
-            <h1 class="houseCard__heading">Beveiliging</h1>
+            <h1 class="houseCard__heading">Inraaksensor</h1>
+            @foreach($beveiliging as $beveiliging)
+            <article class="houseCard__sensorFlex">
+                <p class="houseCard__paragraph">Afstand</p>
+                <p class="houseCard__paragraph">{{$beveiliging->triggered}}</p>
+            </article>
+            @endforeach
         </section>
     </section>
     <section class="houseCard__btnSection">
-        <a class="houseCard__back_to_home" href="/dashboard">Ga terug naar home</a>
+        <a class="houseCard__back_to_home" href="/">Ga terug naar home</a>
     </section>
 </article>

@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
     user="ipmedt5project",
     passwd="m1K4F1tJYRmPnBvK",
     database="ipmedt5project"
-    )
+)
 
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)
 
@@ -22,7 +22,7 @@ while True:
     rcv = port.readline().strip()
 
     if (rcv == "CC188822"):
-        mycursor.execute("SELECT enabled FROM sensors WHERE huis_id = '1' AND id = '1';")
+        mycursor.execute("SELECT enabled FROM sensors WHERE huis_id = '2' AND id = '1';")
         for x in mycursor:
             enabled = x[0]
             if enabled == "true":
