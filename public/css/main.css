@@ -181,7 +181,7 @@ body {
     box-shadow: 0 0.5rem 2rem black;
     padding: 0 1rem;
 }
-.houseCard__sensor[data-sensor=false] {
+.houseCard__sensor[data-sensor=true] {
     background: red;
     color: white;
 }
