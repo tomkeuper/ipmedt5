@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return redirect("/alarmen");
-// });
+Route::get('/', function () {
+    return redirect("/login");
+});
 
 Route::get('/knop', [KnopController::class, 'aanuit']);
 Route::get('/knop/{id}', [KnopController::class, 'aanuit']);
@@ -36,3 +36,5 @@ Route::get('/huizen/{id}', [HuisController::class, 'show']);
 
 Route::post('/push', 'App\Http\Controllers\PushController@store');
 Route::get('/push', 'App\Http\Controllers\PushController@push')->name('push');
+
+Route::get('/alarmen', [AlarmController::class, 'getAlarmen']);
