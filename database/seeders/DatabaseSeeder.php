@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UsersTableSeeder::class,
             HuisTableSeeder::class,
-            // SensorTableSeeder::class,
+            SensorTableSeeder::class,
             PaniekTableSeeder::class,
             TemperatuurTableSeeder::class,
             VochtigheidTableSeeder::class,
